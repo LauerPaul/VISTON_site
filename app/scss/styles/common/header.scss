@@ -4,14 +4,27 @@ header {
 
 	.navbar {
 		height: 80px;
+
+		@media (max-width: 1119px) {
+			height: 60px;
+		}
 	}
 
-	.navbar-nav{
-		@include transition(0.4s);
+	.menu-btn-wrapper {
+		
+		.navbar-nav{
+			@include transition(0.4s);
 
-		&.hide {
-			opacity: 0;
+			&.hide {
+				opacity: 0;
+			}
 		}
+	}
+
+	.navbar-toggler {
+		color: $white;
+		font-size: 28px;
+		outline: none;
 	}
 
 	// LOGO
@@ -32,6 +45,11 @@ header {
 		margin-right: 25px;
 		@include transition(all 0.2s);
 
+		@media (max-width: 1119px) {
+			margin-left: 16px;
+			margin-right: 16px;
+		}
+
 		&:hover:not(.active) {
 			color: $orange;
 		}
@@ -49,6 +67,10 @@ header {
 		border-bottom: 1px solid transparent;
 		position: relative;
 
+		@media (max-width: 1119px) {
+			margin-left: 16px;
+		}
+
 		span.search-toggle {
 			font-size: 24px;
 			padding: 0px 2px;
@@ -57,6 +79,10 @@ header {
 			display: inline-block;
 			line-height: 20px;
 			@include transition(all 0.24s);
+
+			@media (max-width: 1119px) {
+				font-size: 21px;
+			}
 
 			&:hover:not(.load) {
 				color: $orange;

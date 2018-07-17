@@ -1,0 +1,45 @@
+/** ---------------------------------------
+* Copyright 2018©
+* dev. Pavel Ugrynovych (Lauer)
+-------------------------------------------
+*/
+
+/**
+* [Bootstrap]
+*/
+@import "../libs/bootstrap/scss/_functions";
+@import "include/variables/_variables";
+@import "../libs/bootstrap/scss/bootstrap";
+
+/**
+* [MDI]
+*/
+@import "include/variables/mdi_variables";
+@import "../../node_modules/mdi/scss/functions";
+@import "../../node_modules/mdi/scss/path";
+@import "../../node_modules/mdi/scss/core";
+@import "../../node_modules/mdi/scss/icons";
+@import "../../node_modules/mdi/scss/extras";
+@import "../../node_modules/mdi/scss/animated";
+
+/**
+* [Animate.css]
+*/
+@import "../libs/animate-sass/_animate";
+
+/**
+* [Hover.css]
+*/
+@import "../libs/hover/scss/hover";
+
+// mixins
+@import "include/_mixin";
+// variables
+@import "include/variables/project_variables";
+
+
+/**
+* [site styles]
+*/
+@import "styles/theme";
+@import "styles/common/common";

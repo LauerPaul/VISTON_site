@@ -8,6 +8,10 @@ var common = {
 	},
 
 	header: { // HEADER
+		mobileMenu: function(){
+			var body = $(document).find('body');
+			body.toggleClass('mobile-menu');
+		},
 		search: { // SEARCH CASE
 			init: function(close){
 				var close = close == undefined ? false : true
@@ -23,6 +27,7 @@ var common = {
 				var header = $(document).find('header');
 				var menu = $('.navbar-nav', header);
 
+				header.addClass('search')
 				menu.addClass('hide');
 				searchCase.addClass('open');
 			},
@@ -33,6 +38,7 @@ var common = {
 				searchCase.addClass('close');
 				searchCase.removeClass('open');
 				setTimeout(function(){
+					header.removeClass('search')
 					searchCase.removeClass('close');
 					menu.removeClass('hide');
 				},1500)

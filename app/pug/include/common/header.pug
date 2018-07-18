@@ -1,11 +1,7 @@
-header.dark
+header
 	.container
 		nav.navbar.navbar-expand-lg
 			a.navbar-brand(href="#") VISTON
-			
-			.menu-btn-wrapper
-				button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNavAltMarkup" ,aria-controls="navbarNavAltMarkup", aria-expanded="false", aria-label="Toggle navigation")
-					i.mdi.mdi-menu
 
 			.collapse.navbar-collapse.justify-content-end#navbarNavAltMarkup
 				ul.navbar-nav
@@ -15,6 +11,21 @@ header.dark
 					a.nav-item.nav-link(href="#") Карьера
 					a.nav-item.nav-link(href="#") Контакты
 
+				.mobile-footer-menu
+					.wrapper
+						.copyright ©2017 Viston<br>Все права защищены
+						.socialContacts
+							ul
+								li
+									a.hvr-pop(href="#", target="_blank", nofollow)
+										i.mdi.mdi-facebook
+								li
+									a.hvr-pop(href="#", target="_blank", nofollow)
+										i.mdi.mdi-twitter
+								li
+									a.hvr-pop(href="#", target="_blank", nofollow)
+										i.mdi.mdi-google-plus
+
 			.search-wrapper.d-flex.align-items-center
 				//- class .load - loading
 				span.search-toggle(title="Поиск", data-toggle="tooltip", onclick="common.header.search.init()")
@@ -22,3 +33,7 @@ header.dark
 					i.mdi.mdi-close
 
 				input#app-search(type="text", placeholder="Поиск")
+
+				.menu-btn-wrapper
+					button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNavAltMarkup" ,aria-controls="navbarNavAltMarkup", aria-expanded="false", aria-label="Toggle navigation", onclick="common.header.mobileMenu()")
+						i.mdi.mdi-menu

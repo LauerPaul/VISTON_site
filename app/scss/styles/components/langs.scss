@@ -1,0 +1,50 @@
+.langs-wrapper {
+	position: absolute;
+    bottom: 35px;
+    width: 100%;
+
+	span.text {
+		font-family: Montserrat;
+		font-weight: 500;
+		line-height: normal;
+		color: $white;
+		font-size: 14px;
+		opacity: 0.7;
+		margin-right: 8px;
+		cursor: default;
+	}
+
+	#langsDropdown {
+		font-weight: 500;
+		line-height: normal;
+		font-size: 14px;
+		color: $white;
+		cursor: pointer;
+		text-transform: uppercase;
+
+		i {
+			color: $orange;
+			font-size: 16px;
+		    line-height: normal;
+		    margin-left: 5px;
+		    position: relative;
+		    top: 1px;
+		}
+	}
+
+	.dropdown-menu {
+		min-width: 3rem;
+		padding: 0px;
+
+		.dropdown-item {
+			font-weight: 500;
+			font-size: 14px;
+			padding: .25rem 1rem;
+
+			&:hover {
+				background-color: $orange;
+				color: rgba(0,0,0,0.56);
+			}
+		}
+	}
+}

@@ -33,10 +33,7 @@ footer {
 	.copyright {
 		color: $gray-600;
 		cursor: default;
-		
-		@media (max-width: 1119px) {
-			font-size: 14px;
-		}
+		font-size: 14px;
 	}
 
 	// SOCIAL

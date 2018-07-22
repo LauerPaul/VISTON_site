@@ -1,0 +1,29 @@
+//- Production
+section.production-section-wrapper.section
+	.container
+		.row
+			.col-12
+				.section-title Продукция
+			
+		.row
+			.col-12
+				- var items = [{name: 'Краны мостовые', count: 19}, {name: 'Краны козловые', count: 26}, {name: 'Краны консольные', count: 8}, {name: 'Двигатели и компоненты', count: 95}, {name: 'Подьемное оборудование', count: 180}, {name: 'Погрузочное оборудование', count: 135}, {name: 'Металлоконструкции', count: 100}, {name: 'Грохота', count: 6}]
+
+				.list-wrapper.d-flex.flex-wrap
+					- for(var i = 0; i < items.length; ++i){
+						//- Item
+						.item-production
+							.product-image
+								img(src="/images/tmp/kran-mostovoy-podvesnoy1.png")
+							.product-name= items[i].name
+							.product-description.
+								Вырезка из описание данной товарной позиции, обрезка двоеточием, в три строки Вырезка из описание данной товарной позиции, обрезка двоеточием, в три строки
+							.item-footer.d-flex.justify-content-between.align-items-center
+								span.items-count= items[i].count + ' позиций'
+								a.btn-open(href="#", target="_blank") открыть
+					- }
+		.row
+			.col-12.text-center.btn-wrapper
+				a.btn.btn-default.dark(href="#") В РАЗДЕЛ ПРОДУКЦИЯ
+
+				.clearfix

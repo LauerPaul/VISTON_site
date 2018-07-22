@@ -26,14 +26,4 @@ header
 									a.hvr-pop(href="#", target="_blank", nofollow)
 										i.mdi.mdi-google-plus
 
-			.search-wrapper.d-flex.align-items-center
-				//- class .load - loading
-				span.search-toggle(title="Поиск", data-toggle="tooltip", onclick="common.header.search.init()")
-					i.mdi.mdi-magnify
-					i.mdi.mdi-close
-
-				input#app-search(type="text", placeholder="Поиск")
-
-				.menu-btn-wrapper
-					button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNavAltMarkup" ,aria-controls="navbarNavAltMarkup", aria-expanded="false", aria-label="Toggle navigation", onclick="common.header.mobileMenu()")
-						i.mdi.mdi-menu
+			include ../components/common/search

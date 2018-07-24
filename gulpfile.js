@@ -22,6 +22,7 @@ var gulp = require('gulp'),
     gulpPugBeautify = require('gulp-pug-beautify'),
 
     uglify = require('gulp-uglify'),
+    babel = require('gulp-babel'),
 
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
@@ -221,6 +222,8 @@ gulp.task("scripts_min", function() {
                 .pipe(plumber())
                 .pipe(if_(cnf.prop.js.sourcemap, sourcemaps.init()))
                     .pipe(if_(cnf.prop.js.concat, concat('script.min.js').on('error', console.log)))
+                    .pipe(babel({ "compact": false, presets: [["es2015", { loose: true, modules: false }], "stage-2", ], 
+                        plugins: [ "transform-decorators-legacy" ] }))
                     .pipe(uglify({'ie8':true}).on('error', console.log))
                 .pipe(if_(cnf.prop.js.sourcemap, sourcemaps.write(cnf.path.js.sourcemap)))
                 .pipe(gulp.dest(cnf.path.dst + cnf.path.js.out))
@@ -236,6 +239,8 @@ gulp.task("scripts_libs", function() {
                 .pipe(plumber())
                 .pipe(if_(cnf.prop.js.sourcemap, sourcemaps.init()))
                     .pipe(concat('libs.js'))
+                    .pipe(babel({ "compact": false, presets: [["es2015", { loose: true, modules: false }], "stage-2", ], 
+                        plugins: [ "transform-decorators-legacy" ] }))
                     .pipe(uglify())
                     .pipe(rename('libs.min.js'))
                 .pipe(if_(cnf.prop.js.sourcemap, sourcemaps.write(cnf.path.js.sourcemap)))

@@ -26,5 +26,10 @@
     "animate-sass": "^0.8.2",
     "font-awesome": "^4.7.0",
     "font-awesome-animation": "^0.1.0"
+  },
+  "dependencies": {
+    "popper.js": "^1.14.3",
+    "wow": "wowjs#^1.1.2",
+    "slick-carousel": "^1.8.1"
   }
 }

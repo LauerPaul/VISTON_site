@@ -2,11 +2,19 @@ footer {
 	background: $gray-800;
 	color: lighten($white, 5%);
 
+	@media(max-width: 923px){
+		padding: 32px 12px;
+	}	
+
 	.wrapper {
 		height: 80px;
 
-		@media (max-width: 1119px) {
+		@media (max-width: 1119px) and (min-width: 924px){
 			height: 60px;
+		}
+		
+		@media(max-width: 923px){
+			height: 40px;
 		}
 	}
 
@@ -16,6 +24,11 @@ footer {
 		text-transform: uppercase;
 		font-size: 28px;
 		cursor: default;
+		
+		@media(max-width: 923px){
+			width: 100%;
+			text-align: center;
+		}
 
 		a {
 			color: $gray-600;
@@ -34,10 +47,20 @@ footer {
 		color: $gray-600;
 		cursor: default;
 		font-size: 14px;
+		
+		@media(max-width: 923px){
+			font-size: 13px;
+			text-align: center;
+			margin-top: 16px;
+		}
 	}
 
 	// SOCIAL
 	.socialContacts {
+		@media(max-width: 923px){
+			width: 100%;
+			text-align: center;
+		}
 
 		ul {
 			padding: 0px;
@@ -51,9 +74,14 @@ footer {
 				padding: 10px;
 				cursor: default;
 
-				@media (max-width: 1119px) {
+				@media (max-width: 1119px) and (min-width: 924px){
 					font-size: 18px;
 				}	
+
+				@media(max-width: 923px){
+					font-size: 16px;
+					padding: 6px;
+				}
 
 				a {
 					color: $gray-800;
@@ -67,6 +95,12 @@ footer {
 					display: inline-block;
 
 					@media (max-width: 1119px) {
+						width: 24px;
+						height: 24px;
+						line-height: 24px;
+					}
+
+					@media(max-width: 923px){
 						width: 24px;
 						height: 24px;
 						line-height: 24px;

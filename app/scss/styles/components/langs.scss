@@ -12,6 +12,10 @@
 		opacity: 0.7;
 		margin-right: 8px;
 		cursor: default;
+
+		@media(max-width: 923px){
+			font-size: 12px;
+		}
 	}
 
 	#langsDropdown {
@@ -21,6 +25,10 @@
 		color: $white;
 		cursor: pointer;
 		text-transform: uppercase;
+
+		@media(max-width: 923px){
+			font-size: 13px;
+		}
 
 		i {
 			color: $orange;

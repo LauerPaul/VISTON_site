@@ -1,0 +1,25 @@
+section.section.services-section-wrapper
+	.mask
+	.container
+		.row
+			.col-12
+				.section-title.white Услуги
+
+		.row
+
+			- var items_ = [{name: 'Осмотр и техническое обслуживание', image: 'config.png'}, {name: 'Модернизация и переоснащение', image: 'science.png'}, {name: 'Запасные части для кранов', image: 'crane.png'}, {name: 'Ремонт и сервисное обслуживание', image: 'config.png'}, {name: 'Проектирование оборудования', image: 'project.png'}, {name: 'Управление проектами по установке кранов', image: 'manage.png'}]
+
+			- for(var i = 0; i < items_.length; ++i){
+				.col-md-4.col-sm-6
+					.item-service-wrapper
+						.icon-item.d-flex.align-items-center.justify-content-center
+							img(src='/images/icons/'+items_[i].image)
+						.info-item
+							.title= items_[i].name
+							.text Комплексное и единичное обслуживание кранов типа А, Б, В, Г, Д, АБ, АВ.
+			- }
+
+
+		.row
+			.col-12.text-center.btn-wrapper
+				a.btn.btn-default(href="#") весь список услуг

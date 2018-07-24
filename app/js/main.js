@@ -1,10 +1,13 @@
 /* Main */
 var common = {
 	init: function(){
+		// Search header toggle
 		$(document).mouseup(function (e) {
 			var search = $("header .search-wrapper");
 			if (search.has(e.target).length === 0) return common.header.search.init(true)
 		});
+		// Inputs init
+		common.inputs();
 	},
 
 	header: { // HEADER
@@ -44,10 +47,41 @@ var common = {
 				},1500)
 			}
 		}
+	},
+
+	inputs: function(){
+		// Checkbox style
+		$('input[type="checkbox"]').iCheck();
+		// Placeholder hide
+		$(document).on('focus', 'input, textarea', function(){
+			var Placeholder = $(this).attr('placeholder');
+			$(this).attr('placeholder', '');
+
+			$(this).blur(function(){
+				$(this).attr('placeholder', Placeholder);
+			})
+		});
 	}
 }
-
+// Contacts
+var contacts = {
+	map: false,
+	position: {
+		lat: 50.447944,
+		lng: 30.525194
+	},
+	// Google map init
+	initMap: function(){
+		contacts.map = new google.maps.Map(document.getElementById('map'), {
+			center: {
+				lat: contacts.position.lat, 
+				lng: contacts.position.lng
+			},
+			zoom: 8,
+		});
+	}
+}
+// Document init
 $(document).ready(function(e){
-    // $('input[type="checkbox"]').iCheck({checkboxClass: 'checkbox'});
     common.init();
 })

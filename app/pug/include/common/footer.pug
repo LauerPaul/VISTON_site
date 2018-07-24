@@ -5,7 +5,7 @@ footer
 				.d-flex.align-items-center.wrapper
 					.siteLogo-wrapper
 						a(href="#") VISTON
-			.col-md-4
+			.col-md-4.d-none.d-sm-none.d-md-block.d-xl-block.d-lg-block
 				.d-flex.align-items-center.wrapper.justify-content-center
 					.copyright ©2017 Viston Все права защищены
 			.col-md-4
@@ -21,7 +21,11 @@ footer
 							li
 								a.hvr-pop(href="#", target="_blank", nofollow)
 									i.mdi.mdi-google-plus
+			.col-12.d-md-none.d-xl-none.d-lg-none
+				.d-flex.align-items-center.justify-content-center
+					.copyright Viston©2017 <br> Все права защищены
 
 script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js")
 script(src="js/libs.min.js")
-script(src="js/script.min.js", async)
+script(src="js/script.js", async)
+script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk9ybSWVLpaUvAqYhS1282Y6NLZVz4J9Q&callback=contacts.initMap")

@@ -1,0 +1,53 @@
+section.section.section-contacts_feedback-wrapper
+	.container
+		.row
+			.col-md-5.d-none.d-sm-none.d-md-block.d-xl-block.d-lg-block
+				#map
+					img(src="")
+			.col-md-7
+				form
+					.row
+						.col-12
+							.section-title Свяжитесь с нами
+
+					.row
+						.col-md-6.col-sm-12
+							.form-group
+								label
+									.label-text полное имя
+									input.form-control(type="text", placeholder="Подсказка для ввода")
+
+						.col-md-6.col-sm-12
+							.form-group.second
+								label
+									.label-text компания
+									input.form-control(type="text", placeholder="Подсказка для ввода")
+					.row
+						.col-md-6.col-sm-12
+							.form-group
+								label
+									.label-text телефон
+									input.form-control(type="text", placeholder="Подсказка для ввода")
+
+						.col-md-6.col-sm-12
+							.form-group.second
+								label
+									.label-text email
+									input.form-control(type="text", placeholder="Подсказка для ввода")
+
+					.row
+						.col-md-12.col-sm-12
+							.form-group
+								label
+									.label-text комментарий
+									textarea.form-control(placeholder="Подсказка для ввода")
+					.row
+						.col-md-12.col-sm-12
+							.check-group
+								label
+									input(type="checkbox", name="agree")
+									|Я согласен с условиями конфиденциальности
+
+					.row
+						.col-md-12.col-sm-12
+							button.btn.btn-default.dark Отправить

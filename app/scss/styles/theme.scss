@@ -23,18 +23,24 @@
 	padding: 12px 58px;
 	border: 1px solid $orange;
 	position: relative;
-	// @include transition(all 0.4s);
 	@include transform(perspective(1px) translateZ(0));
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-   
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
     -webkit-transition-property: color;
     transition-property: color;
+    -webkit-transition-duration: 0.14s;
+    transition-duration: 0.14s;
 
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+	@media(max-width: 1379px) and (min-width: 924px) {
+		font-size: 17px;	
+	}
+
+	@media(max-width: 923px){
+		font-size: 14px;	
+		padding: 10px 48px;
+	}
+
 
     &::before {
     	content: "";
@@ -49,8 +55,8 @@
 	    transform: scale(0);
 	    -webkit-transition-property: transform;
 	    transition-property: transform;
-	    -webkit-transition-duration: 0.24s;
-	    transition-duration: 0.24s;
+	    -webkit-transition-duration: 0.2s;
+	    transition-duration: 0.2s;
 	    -webkit-transition-timing-function: ease-out;
 	    transition-timing-function: ease-out;
     }
@@ -91,6 +97,14 @@
 
 .section {
 	padding: 128px 0px;
+
+	@media(max-width: 1379px) and (min-width: 924px){
+		padding: 110px 0px;
+	}
+
+	@media(max-width: 923px){
+	    padding: 72px 0px;
+	}
 }
 
 .section-title {
@@ -102,6 +116,20 @@
 	color: #405052;
 	margin-top: 0px;
 	margin-bottom: 96px;
+	cursor: default;
+
+	&.white {
+		color: $white;
+	}
+
+	@media(max-width: 1379px) and (min-width: 924px){
+		margin-bottom: 80px;
+		font-size: 42px;
+	}
+	@media(max-width: 923px){
+		font-size: 36px;
+		margin-bottom: 56px;
+	}
 }
 
 @media (max-width: 991px) {
@@ -112,4 +140,52 @@
 			filter: blur(4px);
 		}
 	}
+}
+
+.form-control {
+	border-bottom: 1px solid $gray-700;
+}
+
+.form-group {
+	margin-bottom: 36px;
+
+	.label-text {
+		font-weight: bold;
+		color: $gray-800;
+	}
+}
+
+.icheckbox {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+    margin-top: -24px;
+    top: 5px;
+    margin-right: 16px;
+    border: 1px solid $gray-700;
+    cursor: pointer;
+    @include transition(all 0.24s);
+
+    &.hover {
+    	border-color: $orange;
+    }
+
+    &.checked {
+    	&::before {
+    		content: '✓';
+			font-size: 28px;
+			line-height: 24px;
+			position: absolute;
+			color: rgba(0,0,0,0.56);
+			text-align: center;
+			width: 100%;
+			top: -2px;
+			left: 1px;
+    	}
+    }
+}
+
+.check-group {
+	margin-bottom: 24px;
 }

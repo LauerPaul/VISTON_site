@@ -31,6 +31,11 @@
 * [Hover.css]
 */
 @import "../libs/hover/scss/hover";
+/**
+* [Slick.css]
+*/
+@import "include/slick/slick";
+@import "include/slick/slick-theme";
 
 // mixins
 @import "include/_mixin";

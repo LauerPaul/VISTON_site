@@ -4,6 +4,11 @@
 	max-height: 100vh;
 	min-height: 620px;
 
+	&.pages {
+		height: 524px;
+		min-height: 320px;
+	}
+
 	@media(max-width: 923px){
 		height: 100vh;
 		max-height: 100vh;

@@ -9,7 +9,7 @@ section.production-section-wrapper.section
 			.col-12
 				- var items = [{name: 'Краны мостовые', count: 19}, {name: 'Краны козловые', count: 26}, {name: 'Краны консольные', count: 8}, {name: 'Двигатели и компоненты', count: 95}, {name: 'Подьемное оборудование', count: 180}, {name: 'Погрузочное оборудование', count: 135}, {name: 'Металлоконструкции', count: 100}, {name: 'Грохота', count: 6}]
 
-				.list-wrapper.d-flex.flex-wrap
+				.list-wrapper.d-flex.flex-wrap.slides-production
 					- for(var i = 0; i < items.length; ++i){
 						//- Item
 						.item-production
@@ -24,6 +24,6 @@ section.production-section-wrapper.section
 					- }
 		.row
 			.col-12.text-center.btn-wrapper
-				a.btn.btn-default.dark(href="#") В РАЗДЕЛ ПРОДУКЦИЯ
+				a.btn.btn-default.dark(href="/products.html") В РАЗДЕЛ ПРОДУКЦИЯ
 
 				.clearfix

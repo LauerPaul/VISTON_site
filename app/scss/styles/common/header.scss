@@ -61,6 +61,20 @@ header {
 			cursor: default;
 		}
 	}
+	
+	@media(max-width: 680px){
+		&.search {
+			.navbar-brand,
+			.navbar-toggler {
+				opacity: 0;
+				position: absolute;
+				@include transition(all 0.24s);
+			}
+			.search-wrapper.open {
+				margin-left: 0px;
+			}
+		}
+	}
 
 	// SEARCH
 	.search-wrapper {
@@ -123,6 +137,7 @@ header {
 		&.open {
 			border-bottom: 1px solid $orange;
 			width: 690px;
+			max-width: 100%;
 			@include animation(open_search_default 1.8s);
 			padding-bottom: 6px;
 

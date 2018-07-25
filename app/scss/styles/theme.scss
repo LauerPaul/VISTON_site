@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900');
 /* Themes */
+@media(max-width: 680px){
+	body {
+		font-size: 14px;
+	}
+}
+
 .app-wrapper {
 	min-height: calc(100% - 80px);
 	background: #F5F5F5;
@@ -39,6 +45,10 @@
 	@media(max-width: 923px){
 		font-size: 14px;	
 		padding: 10px 48px;
+	}
+
+	@media(max-width: 680px){
+		font-size: 13px;	
 	}
 
 
@@ -105,6 +115,9 @@
 	@media(max-width: 923px){
 	    padding: 72px 0px;
 	}
+	@media(max-width: 680px){
+	    padding: 56px 0px;
+	}
 }
 
 .section-title {
@@ -130,6 +143,10 @@
 		font-size: 36px;
 		margin-bottom: 56px;
 	}
+	@media(max-width: 680px){
+		font-size: 28px;
+		margin-bottom: 40px;
+	}	
 }
 
 @media (max-width: 991px) {
@@ -148,6 +165,10 @@
 
 .form-group {
 	margin-bottom: 36px;
+
+	@media(max-width: 680px){
+		margin-bottom: 24px;
+	}
 
 	.label-text {
 		font-weight: bold;

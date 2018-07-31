@@ -1,0 +1,143 @@
+html(lang='ru')
+	include include/common/head
+	body
+		include include/common/header
+
+		.app-wrapper
+			include include/components/banner/pages
+			+top-section("/images/bg/item.jpg", true)
+			
+			section.top-section.mmtop
+				.container
+					.row
+						.col-12
+							.section-title.white.with-breadcrumbs КРАН С-35 100
+							.section-breadcrumbs 
+								a(href="/") Главная
+								|&nbsp;&nbsp;|&nbsp;&nbsp;
+								a(href="/") Продукция
+								|&nbsp;&nbsp;|&nbsp;&nbsp;
+								a(href="/") Краны мостовые
+								|&nbsp;&nbsp;|&nbsp;&nbsp;
+								span Кран С-35 100
+
+			section.section
+				.container
+					.row
+						.col-12
+							.item-sectio-info
+								.item-cover
+									img(src="/images/bg/item.jpg", alt="Кран")
+
+								.container-fluid.b-bottom
+									.row
+										.col-md-6
+											section.border-right-decor
+												.title Описание
+												.text
+													p Консольные краны-применяются для обслуживания ограниченных площадей, в цехах машиностроительных заводов для обслуживания отдельных агрегатов, в т. ч. примыкающих к стенам зданий или другим сооружениям, а также для передачи грузов из одного пролета здания.
+													p Так же работают на открытом воздухе с температурой окружающей среды от -40 до +40° С, изготавливаются стационнарными (на колонне) или настенными, и снабжены ручными или электрическими механизмами поворота консоли и подъема груза.
+										.col-md-6
+											section
+												.title Технические данные
+												.text
+													.row
+														.col-12
+															.row
+																.col-6
+																	p Длинна стропилы
+																.col-6
+																	p 15м
+															.row
+																.col-6
+																	p Металл башни
+																.col-6
+																	p СТ5ПС
+															.row
+																.col-6
+																	p Металл основных соединений
+																.col-6
+																	p ХЗ
+															.row
+																.col-6
+																	p Еще один
+																.col-6
+																	p Легированная сталь
+															.row
+																.col-6
+																	p Кондиционер
+																.col-6
+																	p 360 панорамная, комбинированная
+															.row
+																.col-6
+																	p Система камер
+																.col-6
+																	p Да
+
+								.container-fluid
+									.row
+										.col-md-6
+											section.border-right-decor
+												.title КАК ПРОИСХОДИТ ЗАКАЗ
+												.text
+													p Консольные краны-применяются для обслуживания ограниченных площадей, в цехах машиностроительных заводов для обслуживания отдельных агрегатов, в т. ч. примыкающих к стенам зданий или другим сооружениям, а также для передачи грузов из одного пролета здания.
+													
+													p Так же работают на открытом воздухе с температурой окружающей среды от -40 до +40° С, изготавливаются стационнарными (на колонне) или настенными, и снабжены ручными или электрическими механизмами поворота консоли и подъема груза.
+													
+													p Так же работают на открытом воздухе с температурой окружающей среды от -40 до +40° С, изготавливаются стационнарными (на колонне) или настенными, и снабжены ручными или электрическими механизмами поворота консоли и подъема груза.
+												
+												.title УСЛОВИЯ ДОСТАВКИ
+												.text
+													p Консольные краны-применяются для обслуживания ограниченных площадей, в цехах машиностроительных заводов для обслуживания отдельных агрегатов, в т. ч. примыкающих к стенам зданий или другим сооружениям, а также для передачи грузов из одного пролета здания.
+													
+													p Так же работают на открытом воздухе с температурой окружающей среды от -40 до +40° С, изготавливаются стационнарными (на колонне) или настенными, и снабжены ручными или электрическими механизмами поворота консоли и подъема груза.
+
+										.col-md-6
+											section
+												.title ФОРМА ЗАКАЗА
+												.text(style="max-width: 330px;")
+													p Заполните поля ниже и мы с вами свяжемся в течение 24 часов в рабочее время.
+												form
+													.row
+														.col-md-6.col-sm-12
+															.form-group
+																label
+																	.label-text полное имя
+																	input.form-control(type="text", placeholder="Подсказка для ввода")
+
+														.col-md-6.col-sm-12
+															.form-group.second
+																label
+																	.label-text компания
+																	input.form-control(type="text", placeholder="Подсказка для ввода")
+													.row
+														.col-md-6.col-sm-12
+															.form-group
+																label
+																	.label-text телефон
+																	input.form-control(type="text", placeholder="Подсказка для ввода")
+
+														.col-md-6.col-sm-12
+															.form-group.second
+																label
+																	.label-text email
+																	input.form-control(type="text", placeholder="Подсказка для ввода")
+
+													.row
+														.col-md-12.col-sm-12
+															.form-group
+																label
+																	.label-text комментарий
+																	textarea.form-control(placeholder="Подсказка для ввода")
+													.row
+														.col-md-12.col-sm-12
+															.check-group
+																label
+																	input(type="checkbox", name="agree")
+																	|Я согласен с условиями конфиденциальности
+
+													.row
+														.col-md-12.col-sm-12
+															button.btn.btn-default.dark Отправить
+
+		include include/common/footer

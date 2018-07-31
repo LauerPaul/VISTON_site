@@ -7,12 +7,17 @@
 	&.pages {
 		height: 524px;
 		min-height: 320px;
+
+		@media(max-width: 680px){
+			height: 430px;
+			min-height: 420px;
+		}
 	}
 
 	@media(max-width: 923px){
 		height: 100vh;
 		max-height: 100vh;
-		min-height: 460px;
+		min-height: 460px !important;
 	}
 
 	.carousel-item {
@@ -71,6 +76,11 @@
 
 				&.dark {
 					background: rgba(29, 53, 58, 0.9);
+				    background: linear-gradient(180deg, #1D353A 0%, rgba(29, 53, 58, 0.7) 100%);
+					
+					&.opacity {
+						background: linear-gradient(180deg, #1D353A 0%, rgba(29, 53, 58, 0.7) 100%);
+					}
 				}
 			}
 		}

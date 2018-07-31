@@ -1,3 +1,4 @@
+
 html(lang='ru')
 	include include/common/head
 	body
@@ -6,7 +7,10 @@ html(lang='ru')
 		.app-wrapper
 			include include/components/banner/index
 			
+			- var items = [{name: 'Краны мостовые', count: 19}, {name: 'Краны козловые', count: 26}, {name: 'Краны консольные', count: 8}, {name: 'Двигатели и компоненты', count: 95}, {name: 'Подьемное оборудование', count: 180}, {name: 'Погрузочное оборудование', count: 135}, {name: 'Металлоконструкции', count: 100}, {name: 'Грохота', count: 6}]			
 			include include/components/sections/production
+			+production(items, 'Продукция', true, true, false, false)
+
 			include include/components/sections/services
 			include include/components/sections/contacts_feedback
 

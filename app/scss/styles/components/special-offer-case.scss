@@ -1,0 +1,53 @@
+.special-offer-case {
+	background: $white;
+
+	.info-wrapper {
+		padding: 32px 17px 32px 33px;
+		
+		@media(max-width: 1199px) and (min-width: 924px){}
+	}
+
+	.title {
+		font-style: normal;
+		font-weight: bold;
+		line-height: normal;
+		font-size: 36px;
+		color: $gray-800;
+		margin-bottom: 16px;
+
+		@media(max-width: 1379px) and (min-width: 924px){
+			font-size: 24px;
+		}
+		@media(max-width: 923px){
+			font-size: 21px;
+		}
+		@media(max-width: 680px){
+			font-size: 18px;
+		}
+	}
+
+	.text {
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		color: $gray-800;
+		font-size: 18px;
+		opacity: 0.8;
+		margin-bottom: 24px;
+
+		@media(max-width: 1379px) and (min-width: 924px){
+			font-size: 14px;
+		}
+		@media(max-width: 923px){
+			font-size: 13px;
+		}
+		@media(max-width: 680px){
+			font-size: 13px;
+		}
+	}
+
+	img {
+		max-width: 100%;
+	}
+}

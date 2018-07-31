@@ -1,29 +1,64 @@
 //- Production
-section.production-section-wrapper.section
-	.container
-		.row
-			.col-12
-				.section-title Продукция
-			
-		.row
-			.col-12
-				- var items = [{name: 'Краны мостовые', count: 19}, {name: 'Краны козловые', count: 26}, {name: 'Краны консольные', count: 8}, {name: 'Двигатели и компоненты', count: 95}, {name: 'Подьемное оборудование', count: 180}, {name: 'Погрузочное оборудование', count: 135}, {name: 'Металлоконструкции', count: 100}, {name: 'Грохота', count: 6}]
+mixin production(items, title, btn, slider_, filters, paginator)
+	section.production-section-wrapper.section
+		.container
+			- if(title){
+				.row
+					.col-12
+						.section-title= title
+			- }
 
-				.list-wrapper.d-flex.flex-wrap.slides-production
-					- for(var i = 0; i < items.length; ++i){
-						//- Item
-						.item-production
-							.product-image
-								img(src="/images/tmp/kran-mostovoy-podvesnoy1.png")
-							.product-name= items[i].name
-							.product-description.
-								Вырезка из описание данной товарной позиции, обрезка двоеточием, в три строки Вырезка из описание данной товарной позиции, обрезка двоеточием, в три строки
-							.item-footer.d-flex.justify-content-between.align-items-center
-								span.items-count= items[i].count + ' позиций'
-								a.btn-open(href="#", target="_blank") открыть
-					- }
-		.row
-			.col-12.text-center.btn-wrapper
-				a.btn.btn-default.dark(href="/products.html") В РАЗДЕЛ ПРОДУКЦИЯ
+			.row
+				.col-12
+					.list-wrapper.d-flex.flex-wrap(class=slider_ ? 'slides-production' : '', class=title ? '' : 'shadow')
+						- if(filters) {
+						.filters-production.d-flex.align-items-center
+							.container-fluid
+								.row
+									.col-md-6.col-sm-6.d-none.d-xs-none.d-md-block.d-xl-block.d-lg-block.d-sm-block
+										span.status Показано 16 из 140
+									.col-md-6.col-sm-6.text-right.menu
+										span#filtersDropdown(data-toggle="dropdown",
+															aria-haspopup="true",
+															aria-expanded="false")
+											i.mdi.mdi-filter-variant.filter
+											| &nbsp; Все позиции
+											i.mdi.mdi-menu-down
+										.dropdown-menu.dropdown-menu-right(aria-labelledby="dropdownFiltersButton")
+											- for(var i = 0; i < filters.length; ++i){
+												a.dropdown-item(href="#")= filters[i].name
+											- }
+						- }
 
-				.clearfix
+						- for(var i = 0; i < items.length; ++i){
+							//- Item
+							.item-production
+								.product-image
+									img(src="/images/tmp/kran-mostovoy-podvesnoy1.png")
+								.product-name= items[i].name
+								.product-description.
+									Вырезка из описание данной товарной позиции, обрезка двоеточием, в три строки Вырезка из описание данной товарной позиции, обрезка двоеточием, в три строки
+								.item-footer.d-flex.justify-content-between.align-items-center
+									span.items-count
+										- if(items[i].count){
+										|#{items[i].count} позиций
+										- }
+									a.btn-open(href="/product_category.html") открыть
+						- }
+						- if(paginator) {
+							.paginator-line.d-flex.align-items-center.justify-content-center
+								span.pagination-btn.navs-btn.nav-left Назад
+								span.pagination-btn 1
+								a.pagination-btn 2
+								a.pagination-btn 3
+								a.pagination-btn 4
+								a.pagination-btn 5
+								a.pagination-btn.navs-btn Далее
+						- }
+					.clearfix
+
+			- if(btn){
+				.row
+					.col-12.text-center.btn-wrapper
+						a.btn.btn-default.dark(href="/products.html") В РАЗДЕЛ ПРОДУКЦИЯ
+			- }

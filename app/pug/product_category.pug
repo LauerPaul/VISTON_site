@@ -1,0 +1,31 @@
+html(lang='ru')
+	include include/common/head
+	body
+		include include/common/header
+
+		.app-wrapper
+			include include/components/banner/pages
+			+top-section("/images/bg/pcat.jpg", true)
+			
+			section.top-section.mmtop
+				.container
+					.row
+						.col-12
+							.section-pre-title ПРОДУКЦИЯ
+							.section-title.white.with-breadcrumbs КРАНЫ МОСТОВЫЕ
+							.section-breadcrumbs 
+								a(href="/") Главная
+								|&nbsp;&nbsp;|&nbsp;&nbsp;
+								a(href="/products.html") Продукция
+								|&nbsp;&nbsp;|&nbsp;&nbsp;
+								span Краны мостовые
+			
+			- var items = [{name: 'Кран C35-100'}, {name: 'Кран C35-100'}, {name: 'Кран C35-100'}, {name: 'Кран C35-100'}, {name: 'Кран C35-100'}, {name: 'Кран C35-100'}, {name: 'Кран C35-100'}, {name: 'Кран C35-100'}, {name: 'Кран C35-100'}, {name: 'Кран C35-100'}, {name: 'Кран C35-100'}, {name: 'Кран C35-100'}, {name: 'Кран C35-100'}, {name: 'Кран C35-100'}, {name: 'Кран C35-100'}, {name: 'Кран C35-100'}]
+			- var filters = [{name: 'Спецкраны'},{name: 'Универсальные краны'},{name: 'Компоненты для кранов'}]
+			include include/components/sections/production
+			+production(items, false, false, false, filters, true)
+			
+			include include/components/sections/contacts_feedback
+
+
+		include include/common/footer

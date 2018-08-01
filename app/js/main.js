@@ -10,6 +10,8 @@ var common = {
 		common.inputs();
 		// Home page init
 		common.homePage.init();
+		// Services page init
+		services.init();
 	},
 
 	header: { // HEADER
@@ -142,16 +144,45 @@ var contacts = {
 	},
 	// Google map init
 	initMap: function(){
-		contacts.map = new google.maps.Map(document.getElementById('map'), {
-			center: {
-				lat: contacts.position.lat, 
-				lng: contacts.position.lng
-			},
-			zoom: 8,
-		});
+		if($('#map').length){
+			contacts.map = new google.maps.Map(document.getElementById('map'), {
+				center: {
+					lat: contacts.position.lat, 
+					lng: contacts.position.lng
+				},
+				zoom: 8,
+			});
+		}
+	},
+	feedBackScroll: function(e){
+		e.preventDefault();
+		e.stopPropagation();
+
+		if($(document).find('.section-contacts_feedback-wrapper form').length){
+			setTimeout(function(){
+			$(document).find('body')
+				.animate({scrollTop: $(document).find('.section-contacts_feedback-wrapper form').offset().top - 40}, 600)
+			}, 300);
+		}
 	}
 }
+
+// Service
+var services = {
+	init: function(){
+		if($('#services-accordion').length){
+			$(document).on('click', '#services-accordion .card', function(e){
+				services.scroll(this);
+			});
+		}
+	},
+	scroll: function(item){
+		setTimeout(function(){
+			$(document).find('body')
+					   .animate({scrollTop: $(item).offset().top}, 600)
+		}, 300);
+	}
+}
+
 // Document init
-$(document).ready(function(e){
-    common.init();
-});
+$(document).ready(function(e){ common.init(e); });

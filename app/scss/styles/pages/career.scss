@@ -1,0 +1,157 @@
+.career-wrapper {
+	.header-border {
+		padding: 32px 48px 26px;
+		position: relative;
+
+		@media(max-width: 680px){
+			padding: 24px 32px 22px;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 48px;
+			right: 48px;
+			height: 2px;
+			background: $orange;
+
+			@media(max-width: 680px){
+				left: 32px;
+				right: 32px;
+			}
+		}
+
+		.title {
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+			font-size: 24px;
+			cursor: default;
+	
+			@media(max-width: 1379px) and (min-width: 924px){
+				font-size: 21px;
+			}
+
+			@media(max-width: 923px){
+				font-size: 18px;
+			}
+
+			@media(max-width: 680px){
+				font-size: 16px;
+			}
+			
+		}
+	}
+
+	.container-fluid {
+		.row {
+			.col-md-6:first-child {
+				section {
+					@media(min-width: 924px){
+						padding-right: 36px;
+						padding-left: 33px;
+					}
+				}
+			}
+
+			.col-md-6:last-child {
+				section {
+					@media(min-width: 924px){
+						padding-right: 33px;
+						padding-left: 4px;
+					}
+					@media(max-width: 923px){
+						padding-top: 0px;
+					}
+				}
+			}
+		}
+	}
+
+	section {
+		padding-left: 33px;
+		padding-top: 32px;
+		padding-bottom: 24px;
+
+		@media(max-width: 680px){
+			padding-left: 17px;
+			padding-top: 16px;
+			padding-bottom: 16px;
+		}
+
+		.title {
+			&.mini {
+				padding-top: 0px;
+				font-weight: 500;
+				line-height: 20px;
+				font-size: 14px;
+				margin-bottom: 12px;
+				text-transform: uppercase;
+			}
+		}
+
+		.text {
+			margin-bottom: 24px;
+		}
+	}
+}
+
+.contacts-resume {
+	margin-bottom: 32px;
+	margin-left: 17px;
+}
+
+.contacts-with-mail {
+	text-align: center;
+	padding: 128px 0;
+
+	@media(max-width: 1379px) and (min-width: 924px){
+		padding: 110px 0px;
+	}
+	@media(max-width: 923px){
+	    padding: 72px 0px;
+	}
+	@media(max-width: 680px){
+	    padding: 56px 0px;
+	}
+
+	.title {
+		font-style: normal;
+		font-weight: 900;
+		line-height: normal;
+		font-size: 48px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 16px;
+
+		@media(max-width: 1379px) and (min-width: 924px){
+			font-size: 36px;
+		}
+		@media(max-width: 923px){
+			font-size: 28px;
+		}
+		@media(max-width: 680px){
+			font-size: 24px;
+		}
+	}
+
+	.text {
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		font-size: 24px;
+		text-align: center;
+
+		@media(max-width: 1379px) and (min-width: 924px){
+			font-size: 18px;
+		}
+		@media(max-width: 923px){
+			font-size: 16px;
+		}
+		@media(max-width: 680px){
+			font-size: 14px;
+			padding: 0px 12px;
+		}
+	}
+}

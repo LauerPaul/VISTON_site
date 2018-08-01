@@ -1,0 +1,30 @@
+html(lang='ru')
+	include include/common/head
+	body
+		include include/common/header
+
+		.app-wrapper
+			include include/components/banner/pages
+			+top-section("/images/bg/services_bg.png", true)
+			
+			section.top-section.mmtop
+				.container
+					.row
+						.col-12
+							.section-title.white.with-breadcrumbs УСЛУГИ
+							.section-breadcrumbs 
+								a(href="/") Главная
+								|&nbsp;&nbsp;|&nbsp;&nbsp;
+								span Услуги
+			
+			section.section.mb
+				.container
+					.row
+						.col-12
+							.shadow-wrapper
+								include include/components/services/accordion
+
+			include include/components/sections/contacts_feedback
+
+
+		include include/common/footer

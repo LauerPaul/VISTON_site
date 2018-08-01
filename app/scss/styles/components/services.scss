@@ -1,0 +1,200 @@
+.collapse-style {
+	border: 1px solid #D7D7D7;
+
+	.card {
+		background: white;
+		@include border-radius(0px !important);
+		padding: 36px 36px 36px 58px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		font-size: 24px;
+		cursor: pointer;
+		border: none;
+		position: relative;
+
+		@media(max-width: 1199px) and (min-width: 924px){
+			font-size: 21px;
+		}
+		@media(max-width: 923px){
+			font-size: 18px;
+		}
+		@media(max-width: 680px){
+			font-size: 16px;
+			padding: 24px 24px 24px 50px;
+		}
+
+		&:not(:first-child){
+			border-top: 1px solid #D7D7D7;
+		}
+		
+		.cart-header {
+			position: relative;
+		}
+
+		.arrowStatus {
+			position: absolute;
+			left: -36px;
+			top: -50%;
+			bottom: -50%;
+			margin: auto;
+			color: $gray-600;
+			height: 8px;
+		    line-height: 8px;
+
+			@media(max-width: 680px){
+				left: -30px;
+			}
+		}
+
+		&:not(.collapsed) {
+			.arrowStatus {
+				@include transform(rotate(180deg));
+			}
+		}
+	}
+	
+
+	.card-body {
+		background: $white;
+		padding: 36px 48px;
+		position: relative;
+		@include transition(all 0.24s);
+	
+		&.with-image {
+			@media(min-width: 521px){
+				padding-left: 180px;
+			}
+		}
+
+		.cover-item {
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			overflow: hidden;
+			width: 144px;
+			max-height: 302px;
+
+			@media(max-width: 520px){
+				display: none;
+			}	
+
+			img{
+				width: 100%;
+				position: absolute;
+				top: -50%;
+				bottom: -50%;
+				margin: auto;
+			}
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			height: 2px;
+			background: $orange;
+			left: 50%;
+			top: 0;
+			right: 50%;
+			@include transition(all 0.24s);
+		}
+
+		.info-case {
+			.title {
+				text-transform: uppercase;
+				font-weight: 500;
+				font-size: 14px;
+				margin-bottom: 16px;
+			}
+
+			.text {
+				line-height: 20px;
+				font-size: 14px;
+				color: $gray-700;
+
+				@media(max-width: 680px){
+					font-size: 13px;
+				}
+
+				p {
+					margin-bottom: 8px;
+				}
+
+				h1 {
+					font-size: 24px;
+					color: $gray-800;
+					font-weight: 600;
+					margin-bottom: 24px;
+					margin-top: 40px;
+
+					@media(max-width: 680px){
+						font-size: 21px;
+						margin-bottom: 16px;
+						margin-top: 32px;
+					}
+				}
+
+				h2 {
+					font-size: 21px;
+					color: $gray-800;
+					font-weight: 500;
+					margin-bottom: 16px;
+					margin-top: 32px;
+
+					@media(max-width: 680px){
+						font-size: 18px;
+						margin-bottom: 16px;
+						margin-top: 24px;
+					}
+				}
+
+				h3, h4, h5, h6 {
+					font-size: 18px;
+					color: $gray-800;
+					font-weight: 500;
+					margin-bottom: 16px;
+					margin-top: 24px;
+					
+					@media(max-width: 680px){
+						font-size: 16px;
+						margin-bottom: 16px;
+						margin-top: 24px;
+					}
+				}
+			}
+
+			.btn.small {
+				// float: right;
+				margin-top: 40px;
+
+				@media(max-width: 680px){
+					margin-top: 32px;
+				}
+			}
+		}
+	}
+
+	.show .card-body {
+
+		&::after {
+			content: '';
+			position: absolute;
+			height: 2px;
+			background: $orange;
+			left: 48px;
+			top: 0;
+			right: 48px;
+			@include transition(all 0.35s);
+		}
+		
+		&.with-image {
+
+			@media(min-width: 521px){
+				&::after {
+					left: 180px;
+				}
+			}
+		}
+	}
+}

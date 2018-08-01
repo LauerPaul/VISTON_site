@@ -1,0 +1,26 @@
+html(lang='ru')
+	include include/common/head
+	body
+		include include/common/header
+
+		.app-wrapper
+			include include/components/banner/pages
+			+top-section("/images/bg/career_bg.png", true)
+			
+			section.top-section.mmtop
+				.container
+					.row
+						.col-12
+							.section-title.white.with-breadcrumbs КОНТАКТЫ
+							.section-breadcrumbs 
+								a(href="/") Главная
+								|&nbsp;&nbsp;|&nbsp;&nbsp;
+								span Контакты
+			
+			section.section.mb
+				.container
+					.row
+						.col-12
+
+
+		include include/common/footer

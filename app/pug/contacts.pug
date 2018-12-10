@@ -21,6 +21,24 @@ html(lang='ru')
 				.container
 					.row
 						.col-12
+							.shadow-wrapper.contacts-page
+								.container-fluid.contacts-list
+									.row
+										.col-md-4.align-items-center.justify-content-center.d-flex
+											.item.d-flex.align-items-center
+												i.mdi.mdi-phone-in-talk
+												a(href="tel:") +49 (123) 456-78-90
+										.col-md-4.align-items-center.justify-content-center.d-flex
+											.item.d-flex.align-items-center
+												i.mdi.mdi-map-marker-radius
+												|Scharnhorststr. 14<br>34125 Kassel
+										.col-md-4.align-items-center.justify-content-center.d-flex
+											.item.d-flex.align-items-center
+												i.mdi.mdi-at
+												a(href="mailto:") support@viston.com
+
+										.col-12
+											include include/components/sections/contacts_feedback
 
 
 		include include/common/footer

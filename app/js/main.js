@@ -135,23 +135,30 @@ var common = {
 		}
 	}
 }
+
+/* Contacts */
+
+
 // Contacts
 var contacts = {
 	map: false,
-	position: {
-		lat: 50.447944,
-		lng: 30.525194
-	},
 	// Google map init
 	initMap: function(){
 		if($('#map').length){
+			var lat = parseFloat($('#map').attr('data-lat')),
+				lng = parseFloat($('#map').attr('data-lng')),
+				office = {lat: lat, lng: lng};
+
 			contacts.map = new google.maps.Map(document.getElementById('map'), {
-				center: {
-					lat: contacts.position.lat, 
-					lng: contacts.position.lng
-				},
-				zoom: 8,
+				center: office,
+				zoom: 17,
 			});
+
+			var marker = new google.maps.Marker({
+	          position: office,
+	          map: contacts.map,
+	          icon: '/images/icons/googleMarker.png'
+	        });
 		}
 	},
 	feedBackScroll: function(e){
@@ -160,7 +167,7 @@ var contacts = {
 
 		if($(document).find('.section-contacts_feedback-wrapper form').length){
 			setTimeout(function(){
-			$(document).find('body')
+			$(document).find('html')
 				.animate({scrollTop: $(document).find('.section-contacts_feedback-wrapper form').offset().top - 40}, 600)
 			}, 300);
 		}
@@ -178,7 +185,7 @@ var services = {
 	},
 	scroll: function(item){
 		setTimeout(function(){
-			$(document).find('body')
+			$(document).find('html')
 					   .animate({scrollTop: $(item).offset().top}, 600)
 		}, 300);
 	}

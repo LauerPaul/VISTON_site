@@ -120,7 +120,8 @@
 	}
 }
 
-.production-section-wrapper {
+.production-section-wrapper,
+.products-category-wrapper {
 	background: #E5E5E5;
 
 	.list-wrapper {
@@ -129,6 +130,9 @@
 		padding-left: 1px;
 
 			&.shadow {
+				background: white;
+				z-index: 1;
+
 				@media(min-width: 681px){
 					@include box-shadow(0px 4px 24px rgba(0, 0, 0, 0.12));
 				}
@@ -293,4 +297,119 @@
 	.product-description {
 		text-align: left;
 	}
+}
+
+.products-category-wrapper {
+	.list-wrapper {
+		.col-12 {
+			&:not(:last-child){
+				.line {
+					border-bottom: 1px solid rgba(206, 206, 206, 0.53);
+				}
+			}
+		}
+	}
+
+	.list-item {
+		padding: 40px 32px 40px;
+
+		.line {
+			margin-top: 40px;
+		}
+
+		.item-image {
+			text-align: center;
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		.product-name {
+			font-style: normal;
+		    font-weight: bold;
+		    line-height: normal;
+		    font-size: 18px;
+		    color: #1D353A;
+		    margin-bottom: 16px;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		    display: inline-block;
+		    overflow: hidden;
+
+			@media(max-width: 1379px){
+				font-size: 15px;
+			}
+		}
+
+		.product-description {
+		    font-style: normal;
+		    font-weight: 500;
+		    line-height: normal;
+		    font-size: 14px;
+		    color: #798688;
+		    cursor: default;
+
+			@media(max-width: 1379px){
+				font-size: 13px;
+			}
+		}
+
+		.btn {
+			@media(max-width: 1379px){
+				font-size: 15px;
+			}
+		}
+	}
+}
+
+.info-case-product-category {
+	background: $white;
+	border-bottom: 1px solid rgba(206, 206, 206, 0.53);
+
+	.imageInfo {
+		min-height: 300px;
+	}
+
+	.textInfo {
+		padding: 64px 33px 64px 7px;
+ 		
+ 		.title {
+ 			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+			font-size: 24px;
+			text-transform: uppercase;
+			color: $gray-800;
+			margin: 0px;
+			padding: 0px;
+			margin-bottom: 32px;
+			padding-bottom: 32px;
+		    position: relative;
+
+			&::after {
+				content: '';
+			    position: absolute;
+			    height: 2px;
+			    background: #FFD600;
+			    left: 0;
+			    top: 100%;
+			    right: 0;
+			    transition: all 0.35s;
+			}
+ 		}
+
+ 		.text {
+			color: $gray-700;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 20px;
+			font-size: 14px;
+
+			p {
+				margin-bottom: 8px;
+			}
+ 		}
+	}
+
 }

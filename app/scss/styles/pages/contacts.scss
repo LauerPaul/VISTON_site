@@ -1,0 +1,51 @@
+.contacts-list {
+	padding-top: 40px;
+	
+	@media (max-width: 923px) {
+		padding-top: 0px;
+	}
+
+	.item {
+		margin-top: 24px;
+		font-weight: 400;
+		font-size: 18px;
+		cursor: default;
+
+		@media (max-width: 923px) {
+			margin-top: 18px;
+			font-size: 16px;
+		    justify-content: flex-start !important;
+		    min-width: 320px;
+		    padding: 0px 24px;
+		}
+
+		> i {
+			margin-right: 12px;
+			font-size: 36px;
+			color: #FFD600;
+			
+			@media (max-width: 923px) {
+				font-size: 26px;
+			}
+		}
+
+		a {
+			color: #212529;
+		}
+	}
+
+	.section-contacts_feedback-wrapper {
+	    padding: 72px 0px;
+	    border-top: 1px solid #D7D7D7;
+        margin-top: 64px;
+
+		@media (max-width: 923px) {
+	    	padding: 40px 0px;
+        	margin-top: 24px;
+		}
+	}
+}
+
+.shadow-wrapper.contacts-page { 
+	margin-bottom: 128px;
+}
